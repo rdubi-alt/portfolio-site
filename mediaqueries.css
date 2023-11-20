@@ -1,100 +1,137 @@
-@media screen and (max-width: 1400px) {
-  #profile {
-    height: 83vh;
-    margin-bottom: 6rem;
-  }
-
-  .about-containers {
-    flex-wrap: wrap;
-  }
-}
-
-@media screen and (max-width: 1200px) {
+/* HAMBURGER MENU */
+@media (max-width: 848px) {
   #desktop-nav {
     display: none;
   }
+  /* note: display:none hides content for screenreader, too  */
   #hamburger-nav {
     display: flex;
   }
-  #experience,
-  .experience-details-container {
-    margin-top: 2rem;
-  }
-  #profile,
-  .section-container {
+}
+.hamburger-icon[aria-expanded="true"] {
+  color: black;
+}
+.js-enabled .menu-links {
+  display: none;
+}
+.hamburger-icon[aria-expanded="true"] svg {
+  background: #164a4a;
+  fill: white;
+}
+.hamburger-icon[aria-expanded="true"] span {
+  position: static;
+}
+.hamburger-icon[aria-expanded="true"] #expanded {
+  display: block;
+}
+.hamburger-icon[aria-expanded="true"] + .menu-links {
+  display: block;
+}
+
+@media (min-width: 848px) {
+  .js-enabled .menu-links {
     display: block;
   }
+}
+
+@media (min-width: 849px) {
+  #hamburger-nav {
+    display: none;
+  }
+
+  #desktop-nav {
+    display: flex;
+  }
+}
+
+/* Extra small screens: */
+@media (max-width: 576px) {
   .arrow {
     display: none;
   }
+
+  .menu-links a {
+    font-size: 2rem;
+  }
+
+  /*  PROFILE SECTION  */
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  section {
+    margin: 0 5%;
+  }
+
   section,
   .section-container {
     height: fit-content;
   }
-  section {
-    margin: 0 5%;
+
+  main {
+    display: block;
   }
+
   .section__pic-container {
-    width: 275px;
-    height: 275px;
-    margin: 0 auto 2rem;
+    display: none;
   }
+
+  #socials-container {
+    margin-top: 1.5rem;
+  }
+
+  /*  ABOUT SECTION  */
+
+  .about-details-container {
+    flex-direction: column;
+  }
+
+  .about-text-container {
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
+
   .about-containers {
-    margin-top: 0;
+    display: block;
+  }
+
+  .text-container {
+    width: 100%;
+  }
+
+  .details-container {
+    display: block;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  /*  PROJECTS SECTION  */
+
+  #projects,
+  #contact {
+    height: fit-content;
+  }
+
+  .experience-details-container {
+    margin-top: 2rem;
   }
 }
 
-@media screen and (max-width: 600px) {
-  #contact,
-  footer {
-    height: 40vh;
-  }
-  #profile {
-    height: 83vh;
-    margin-bottom: 0;
-  }
-  article {
-    font-size: 1rem;
-  }
-  footer nav {
-    height: fit-content;
-    margin-bottom: 2rem;
-  }
-  .about-containers,
-  .contact-info-upper-container,
-  .btn-container {
-    flex-wrap: wrap;
-  }
-  .contact-info-container {
-    margin: 0;
-  }
-  .contact-info-container address,
-  .nav-links li a {
-    font-size: 1rem;
-  }
-  .experience-sub-title {
-    font-size: 1.25rem;
-  }
-  .logo {
-    font-size: 1.5rem;
-  }
-  .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
-    text-align: center;
-  }
-  .section__pic-container {
-    width: auto;
-    height: 46vh;
-    justify-content: center;
-  }
-  .section__text__p2 {
-    font-size: 1.25rem;
-  }
-  .title {
-    font-size: 2rem;
-  }
-  .text-container {
-    text-align: justify;
-  }
-}
+/* 
+Small:
+@media (min-width: 576px)
+
+Large
+@media (min-width: 992px)
+
+Medium Screens 
+@media screen and (min-width: 768px)
+
+Extra Large Screens 
+@media screen and (min-width: 1200px)
+
+Extra Extra Large Screens 
+@media screen and (min-width: 1400px)
+
+*/

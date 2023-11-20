@@ -15,247 +15,220 @@
     <link rel="stylesheet" href="mediaqueries.css" />
   </head>
   <body>
-    <nav id="desktop-nav">
-      <div class="logo">Raquel Dubin</div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
+    <!-- DESKTOP NAV -->
+    <header>
+      <nav id="desktop-nav">
+        <div class="logo">Raquel Dubin</div>
+        <div>
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- HAMBURGER NAV -->
     <nav id="hamburger-nav">
       <div class="logo">Raquel Dubin</div>
       <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+        <button
+          class="hamburger-icon"
+          aria-haspopup="true"
+          aria-expanded="false"
+          onclick="toggleMenu()"
+        >
+          <span>Menu</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewbox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <!-- note: aria-hidden means menu icon still visible, but screenreader won't automatically 
+           unhelpfully read out the svg, will just read "Menu"-->
+            <path d="M0 0h24v24H0z" fill="none" />
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+          </svg>
+        </button>
         <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+          <ul>
+            <li><a href="#about" onclick="toggleMenu()">About</a></li>
+            <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+          </ul>
         </div>
       </div>
     </nav>
+    <!-- PROFILE SECTION -->
     <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/profile-pic.png" alt="John Doe profile picture" />
-      </div>
-      <div class="section__text">
-        <p class="section__text">Hello, I'm</p>
-        <h1 class="title">Raquel Dubin</h1>
-        <h2>Digital Librarian</h2>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/resume-example.pdf')"
-          >
-            Download Resume
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Get in Touch
-          </button>
+      <main>
+        <div class="section-text">
+          <p class="section-text">Hello, I'm</p>
+          <h1 class="title">Raquel Dubin</h1>
+          <h2 class="section-text">
+            MLIS student with an interest in digital librarianship
+          </h2>
+          <div class="btn-container">
+            <button
+              class="btn btn-color-1"
+              onclick="window.open('./assets/resume.pdf')"
+            >
+              Download Resume
+            </button>
+            <button
+              class="btn btn-color-2"
+              title="Contact Me"
+              onclick="location.href='./#contact'"
+            >
+              Get in Touch
+            </button>
+          </div>
         </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn Profile"
-            class="icon"
-            onclick="window.open('https://www.linkedin.com/in/raquel-dubin-06b2b3160/')"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My GitHub Profile"
-            class="icon"
-            onclick="window.open('https://github.com/rdubi-alt')"
-          />
+
+        <div class="pic-socials-container">
+          <div class="section__pic-container">
+            <img
+              src="./assets/profile-pic.jpeg"
+              alt="Raquel Dubin profile picture"
+              class="profile-pic"
+              style="
+                width: 21rem;
+                height: auto;
+                max-width: 100%;
+                border-radius: 50%;
+              "
+            />
+          </div>
+
+          <div id="socials-container">
+            <img
+              src="./assets/linkedin.png"
+              alt="My LinkedIn profile"
+              title="LinkedIn"
+              class="icon"
+              role="button"
+              tabindex="0"
+              onclick="window.open('https://www.linkedin.com/in/raquel-dubin-06b2b3160/')"
+            />
+            <img
+              src="./assets/github.png"
+              alt="My GitHub profile"
+              title="GitHub"
+              class="icon"
+              role="button"
+              tabindex="0"
+              onclick="window.open('https://github.com/rdubi-alt')"
+            />
+          </div>
         </div>
-      </div>
+      </main>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        role="button"
+        tabindex="0"
+        title="Scroll Down"
+        onclick="location.href='./#about'"
+      />
     </section>
+
     <section id="about">
-      <p class="section__text">Get To Know More</p>
       <h1 class="title">About Me</h1>
       <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assets/about-pic.png"
-            alt="Profile picture"
-            class="about-pic"
-          />
-        </div>
         <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>3+ years<br />Library Services</p>
+          <div class="about-text-container">
+            <div class="about-containers">
+              <div class="details-container">
+                <img
+                  src="./assets/experience.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <h3>Experience</h3>
+                <p>3+ years<br />Library Services</p>
+              </div>
+              <div class="details-container">
+                <img
+                  src="./assets/education.png"
+                  alt="Education icon"
+                  class="icon"
+                />
+                <h3>Education</h3>
+                <p>
+                  BA in Psychology<br />Current
+                  <b
+                    ><abbr title="Master of Library and Information Science"
+                      >MLIS</abbr
+                    >
+                    student</b
+                  >
+                </p>
+              </div>
             </div>
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
+            <div class="text-container">
               <p>
-                BA in Psychology<br />Current
-                <abbr title="Master of Library and Information Science"
-                  >MLIS</abbr
-                >
-                student
+                I’m an Information Professional in training with a passion for
+                information organization, technology, and psychology. I'm quick
+                to adapt to different guidelines and technologies and I always,
+                always seek to learn more.
+                <br />Currently, I'm working as a
+                <b>database and research volunteer</b> at the Los Angeles Zoo.
+                <br />
+
+                My other passions include bookmaking (both the stories and the
+                books themselves), painting with watercolor, and taking care of
+                animals.
               </p>
             </div>
           </div>
-          <div class="text-container">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
-              aperiam autem dignissimos laborum ad odit mollitia quaerat.
-              Blanditiis, tenetur! Consequuntur recusandae molestias inventore
-              unde quibusdam esse tempore harum animi? Dolor?
-            </p>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
-    </section>
-    <section id="experience">
-      <p class="section__text">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
           <div class="details-container">
-            <h2 class="experience-sub-title">Library Services</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Python</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>SPSS</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>SEO</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
+            <h2>Skills</h2>
+            <ul class="article-container">
+              <li>
+                <article class="skill">
+                  <h3>Databases</h3>
+                  <div class="skill-bar">
+                    <div>
+                      <div class="skill-level" style="width: 70%">70%</div>
+                    </div>
+                  </div>
+                </article>
+              </li>
+
+              <li>
+                <article class="skill">
+                  <h3>Ex Libris Alma</h3>
+                  <div class="skill-bar">
+                    <div>
+                      <div class="skill-level" style="width: 40%">40%</div>
+                    </div>
+                  </div>
+                </article>
+              </li>
+
+              <li>
+                <article class="skill">
                   <h3>UX Design</h3>
-                  <p>Basic-Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Library Services</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>ArchivesSpace</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Archon</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>ExLibris Alma</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Raiser's Edge (Other Database Entry)</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-            </div>
+                  <div class="skill-bar">
+                    <div>
+                      <div class="skill-level" style="width: 60%">60%</div>
+                    </div>
+                  </div>
+                </article>
+              </li>
+
+              <li>
+                <article class="skill">
+                  <h3>HTML/CSS</h3>
+                  <div class="skill-bar">
+                    <div>
+                      <div class="skill-level" style="width: 70%">70%</div>
+                    </div>
+                  </div>
+                </article>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -263,87 +236,84 @@
         src="./assets/arrow.png"
         alt="Arrow icon"
         class="icon arrow"
+        role="button"
+        tabindex="0"
+        title="Scroll Down"
         onclick="location.href='./#projects'"
       />
     </section>
+
+    <!-- PROJECTS SECTION -->
     <section id="projects">
-      <p class="section__text">Browse My Recent</p>
       <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
+      <div class="about-details-container">
         <div class="about-containers">
           <div class="details-container color-container">
             <div class="article-container">
               <img
-                src="./assets/project-1.png"
-                alt="Project 1"
+                src="./assets/project-one.jpeg"
+                alt="The digital collection guide for the Susan B. Nelson Collection on the Online Archive of California website."
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Project One</h2>
+            <h2 class="project-title">Project One</h2>
+            <p class="section-text">
+              Made this collection accessible on the Online Archive of
+              California.
+            </p>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="window.open('https://github.com/rdubi-alt')"
+                onclick="window.open('https://oac.cdlib.org/view?docId=c8gq7463&view=dsc&style=oac4&dsc.position=1')"
               >
-                GitHub
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.open('https://github.com/rdubi-alt')"
-              >
-                <!-- leave link to finished project -->
-                Live Demo
+                See Collection
               </button>
             </div>
           </div>
+
           <div class="details-container color-container">
             <div class="article-container">
               <img
-                src="./assets/project-2.png"
-                alt="Project 2"
-                class="project-img"
+                src="./assets/project-two.jpeg"
+                alt="Wireframe of the home page of a mobile app."
+                class="project-img2"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Project Two</h2>
+            <h2 class="project-title">Project Two</h2>
+            <p class="section-text">
+              Designed a user-friendly app using UX Design concepts.
+            </p>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="window.open('https://github.com/rdubi-alt')"
+                onclick="window.open('https://docs.google.com/presentation/d/1lhL8qxnW7KLaVobdv5XXKkRtjPiAFD_tzw-wN-xUNA8/edit?usp=drive_link')"
               >
-                GitHub
+                See Project
               </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.open('https://github.com/rdubi-alt')"
-              >
-                <!-- leave link to finished project -->
-                Live Demo
-              </button>
+              <!-- NOTE: Later, add intro and wireframes to doc [Change Button title]-->
             </div>
           </div>
+
           <div class="details-container color-container">
             <div class="article-container">
               <img
-                src="./assets/project-3.png"
-                alt="Project 3"
-                class="project-img"
+                src="./assets/project-three.JPG"
+                alt="Title of the game ('Going Home') in ascii-art style and the text 'Press Enter to continue' prompting the user's input on the next line."
+                class="project-img3"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Project Three</h2>
+            <h2 class="project-title">Project Three</h2>
+            <p class="section-text">
+              Coded a text adventure game called "Going Home" using Python.
+            </p>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="window.open('https://github.com/rdubi-alt')"
+                onclick="window.open('https://github.com/rdubi-alt/Going-Home')"
               >
                 GitHub
               </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.open('https://github.com/rdubi-alt')"
-              >
-                <!-- leave github link to finished project -->
-                Live Demo
-              </button>
+              <!-- Note: Add project file in a second button so user can run game easily -->
             </div>
           </div>
         </div>
@@ -352,53 +322,81 @@
         src="./assets/arrow.png"
         alt="Arrow icon"
         class="icon arrow"
+        role="button"
+        tabindex="0"
+        title="Scroll Down"
         onclick="location.href='./#contact'"
       />
     </section>
+
+    <!-- CONTACT SECTION -->
     <section id="contact">
-      <p class="section__text">Get in Touch</p>
       <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <address>
-            <a href="mailto:example@email.com">example@email.com</a>
-          </address>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <address>
-            <a
-              href="https://www.linkedin.com/in/raquel-dubin-06b2b3160/"
-              target="_blank"
-              >LinkedIn</a
-            >
-          </address>
-        </div>
-      </div>
+      <address>
+        Connect with me on
+        <a
+          href="https://www.linkedin.com/in/raquel-dubin-06b2b3160/"
+          target="_blank"
+          >LinkedIn</a
+        >.
+      </address>
     </section>
+
     <footer>
       <nav>
         <div class="nav-links-container">
           <ul class="nav-links">
             <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
             <!-- <li><a href="">Site Map</a></li> -->
           </ul>
         </div>
+        <img
+          src="./assets/toparrow.png"
+          alt="Arrow icon"
+          class="icon toparrow"
+          role="button"
+          tabindex="0"
+          title="Scroll to Top"
+          onclick="location.href='./#profile'"
+        />
       </nav>
       <p>Copyright &#169; 2023 Raquel Dubin. All Rights Reserved.</p>
     </footer>
+    <aside>
+      <mark>This site is currently under construction.</mark><br />
+      I'm working to make this site as accessible as possible. So far, I have
+      alt text and a clickable hamburger menu that works with devices like
+      screenreaders.
+      <br />
+      For example, the screenreader will say when the menu is
+      expanded/collapsed.
+    </aside>
+
     <script src="script.js"></script>
   </body>
 </html>
+
+<!-- (aria label is what the screenreader reads out if the text you have
+isn't already descriptive enough. Visible text must be in aria 
+label along with extra description)-->
+
+<!-- For img: alt + aria-labelledby="caption" 
+ <p id="caption">Caption content</p> (screenreader will read out
+whatever's in the caption(avoids repetitive code))-->
+
+<!-- 
+For Contact Form: 
+https://www.youtube.com/watch?v=XSMvqVkOF-k&list=PLadWW12WRDFNrIb1jHDWso76xb2m3oLtz&index=16&pp=iAQB 
+-add clear borders around input points
+-add i w/ circle, put in red: Prototype Only, Click to See Conf)
+<div>
+  <label for="name">Enter your name</label>
+  <input type="text" id="name" name="name" />
+</div>
+-->
+
+<!-- add aria-label to sections/region to elements if you want someone to 
+ quickly nav to something they'd have to go through a lot of links/text
+to get to (use ins+F7 to open elements list, landmarks)-->
