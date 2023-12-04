@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap");
 
 /*GENERAL*/
-/*Ctrl+/ or Crl+K and Crl+C to quick comment*/
 * {
   margin: 0;
   padding: 0;
@@ -273,7 +272,7 @@ main {
 }
 
 .text-container {
-  width:40rem;
+  width: 40rem;
   height: auto;
   font-size: 1.13rem;
   line-height: 1.8rem;
@@ -307,7 +306,7 @@ main {
 
 .skill-bar {
   width: 100%;
-  background-color: #DDDDDD;
+  background-color: #dddddd;
 }
 
 .skill-level {
@@ -336,12 +335,12 @@ main {
 .color-container {
   border-color: rgb(163, 163, 163);
   background: rgb(250, 250, 250);
-  height:90%;
-  width:90%;
+  height: 90%;
+  width: 90%;
 }
 
 .project-img {
-  width: 20rem;
+  width: 22rem;
   height: auto;
 }
 
@@ -384,7 +383,7 @@ address {
 /* address code above is temporary */
 
 address a {
-  color:blue;
+  color: blue;
   text-decoration: none;
 }
 
@@ -393,6 +392,7 @@ address a:hover {
 }
 
 #contact {
+  position: relative;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -417,4 +417,3 @@ footer p {
   right: -5rem;
   bottom: 2.5rem;
 }
-

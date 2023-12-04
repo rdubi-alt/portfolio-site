@@ -34,7 +34,6 @@
       <div class="hamburger-menu">
         <button
           class="hamburger-icon"
-          aria-haspopup="true"
           aria-expanded="false"
           onclick="toggleMenu()"
         >
@@ -66,7 +65,8 @@
           <p class="section-text">Hello, I'm</p>
           <h1 class="title">Raquel Dubin</h1>
           <h2 class="section-text">
-            MLIS student with an interest in digital librarianship
+            <abbr title="Master of Library and Information Science">MLIS</abbr>
+            student with an interest in digital librarianship
           </h2>
           <div class="btn-container">
             <button
@@ -103,7 +103,7 @@
           <div id="socials-container">
             <img
               src="./assets/linkedin.png"
-              alt="My LinkedIn profile"
+              alt="Raquel Dubin LinkedIn profile"
               title="LinkedIn"
               class="icon"
               role="button"
@@ -112,7 +112,7 @@
             />
             <img
               src="./assets/github.png"
-              alt="My GitHub profile"
+              alt="Raquel Dubin GitHub profile"
               title="GitHub"
               class="icon"
               role="button"
@@ -122,15 +122,6 @@
           </div>
         </div>
       </main>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        role="button"
-        tabindex="0"
-        title="Scroll Down"
-        onclick="location.href='./#about'"
-      />
     </section>
 
     <section id="about">
@@ -234,7 +225,8 @@
       </div>
       <img
         src="./assets/arrow.png"
-        alt="Arrow icon"
+        alt="Scroll down"
+        aria-label="Scroll down to the Projects Section."
         class="icon arrow"
         role="button"
         tabindex="0"
@@ -251,8 +243,8 @@
           <div class="details-container color-container">
             <div class="article-container">
               <img
-                src="./assets/project-one.jpeg"
-                alt="The digital collection guide for the Susan B. Nelson Collection on the Online Archive of California website."
+                src="./assets/project-one.jpg"
+                alt="The Susan B. Nelson digital collection guide."
                 class="project-img"
               />
             </div>
@@ -320,7 +312,8 @@
       </div>
       <img
         src="./assets/arrow.png"
-        alt="Arrow icon"
+        alt="Scroll down"
+        aria-label="Scroll down to the Contact Me Section."
         class="icon arrow"
         role="button"
         tabindex="0"
@@ -340,6 +333,16 @@
           >LinkedIn</a
         >.
       </address>
+      <img
+        src="./assets/toparrow.png"
+        alt="Scroll to the top"
+        aria-label="Scroll to the top of the page"
+        class="icon arrow"
+        role="button"
+        tabindex="0"
+        title="Scroll to Top"
+        onclick="location.href='./#profile'"
+      />
     </section>
 
     <footer>
@@ -352,15 +355,6 @@
             <!-- <li><a href="">Site Map</a></li> -->
           </ul>
         </div>
-        <img
-          src="./assets/toparrow.png"
-          alt="Arrow icon"
-          class="icon toparrow"
-          role="button"
-          tabindex="0"
-          title="Scroll to Top"
-          onclick="location.href='./#profile'"
-        />
       </nav>
       <p>Copyright &#169; 2023 Raquel Dubin. All Rights Reserved.</p>
     </footer>
