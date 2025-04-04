@@ -113,8 +113,7 @@
 
   /*  PROJECTS SECTION  */
 
-  #projects,
-  #contact {
+  #projects {
     height: fit-content;
   }
 
@@ -138,35 +137,37 @@
   }
 }
 
-/* MEDIUM Screens  */
- @media (min-width: 768px) {
+
+/* MEDIUM Screen 1 */
+
+ @media (min-width: 577px) and (max-width: 991px) {
   .arrow {
     display: none;
   }
-  
-  section {
-    margin: 0 7%;
-    padding-top: 4vh;
+
+  #skill {
+    display: none;
   }
+
+  .section__pic-container {
+    display: none;
+  }
+
 
   /* PROFILE */
 
   #profile {
-    margin: 3rem;
     height: 60vh;
-  }
-
-  main {
-    gap: 3rem;
+    align-items: center;
   }
 
   .section-text {
-    align-self: flex-start;
+    align-self: center;
   }
 
   .pic-socials-container {
     display: block;
-  } */
+  } 
 
 /* ABOUT */
 
@@ -187,15 +188,29 @@
   } 
 
 /* PROJECTS */
+#projects {
+  height: fit-content;
+}
 
+.experience-details-container {
+  margin-top: 2rem;
+}
 .project-img {
-    align-self: center;
-  }
+  width: 13rem;
+  height: auto;
+}
 
-  .project-img3 {
-    align-self: center;
-  }
-} 
+.project-img2 {
+  width: 13rem;
+  height: auto;
+  align-self: center;
+}
+
+.project-img3 {
+  width: 13rem;
+  height: auto;
+}
+}
 
 /* LARGE Screens */
 @media (min-width: 992px) {
@@ -250,6 +265,7 @@
     margin-bottom: 2rem;
   }
 }
+
 
 /* EXTRA LARGE Screens  */
 @media (min-width: 1200px) {
