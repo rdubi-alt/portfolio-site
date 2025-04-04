@@ -320,11 +320,12 @@ main {
 
 .article-container {
   display: flex;
-  list-style-type: none;
+  list-style-type: circle;
   text-align: initial;
   flex-wrap: wrap;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.12rem;
+  padding: 2rem;
 }
 
 /* PROJECTS SECTION */
