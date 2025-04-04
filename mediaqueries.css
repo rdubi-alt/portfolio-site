@@ -121,6 +121,21 @@
   .experience-details-container {
     margin-top: 2rem;
   }
+  .project-img {
+    width: 13rem;
+    height: auto;
+  }
+  
+  .project-img2 {
+    width: 13rem;
+    height: auto;
+    align-self: center;
+  }
+  
+  .project-img3 {
+    width: 13rem;
+    height: auto;
+  }
 }
 
 /* MEDIUM Screens  */
