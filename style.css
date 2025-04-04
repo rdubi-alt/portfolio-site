@@ -342,12 +342,12 @@ main {
 }
 
 .project-img {
-  width: 22rem;
+  width: 20rem;
   height: auto;
 }
 
 .project-img2 {
-  width: 8rem;
+  width: 20rem;
   height: auto;
   align-self: center;
 }
@@ -355,8 +355,6 @@ main {
 .project-img3 {
   width: 20rem;
   height: auto;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
 }
 
 /* NOTE: Adjust image sizes, reupload, change just to:
@@ -405,7 +403,7 @@ address a:hover {
 
 footer {
   height: 26vh;
-  margin: 0 1rem;
+  margin: 2rem;
 }
 
 footer p {
